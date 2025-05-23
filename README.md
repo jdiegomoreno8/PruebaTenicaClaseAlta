@@ -22,7 +22,7 @@
 ## Instrucciones de instalación y ejecución
 1. **Clona este repositorio** o descomprime los archivos en una carpeta local:
 
-      git clone [https://github.com/tu-usuario/vue-tareas.git](https://github.com/jdiegomoreno8/PruebaTenicaClaseAlta.git)
+      git clone [https://github.com/jdiegomoreno8/PruebaTenicaClaseAlta.git]
         cd vue-tareas
 ---
 2. Instala las dependencias del proyecto:   
