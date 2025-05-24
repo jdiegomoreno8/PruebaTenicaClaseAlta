@@ -23,7 +23,6 @@
 1. **Clona este repositorio** o descomprime los archivos en una carpeta local:
 
       git clone [https://github.com/jdiegomoreno8/PruebaTenicaClaseAlta.git]
-        cd vue-tareas
 ---
 2. Instala las dependencias del proyecto:   
    npm install
@@ -46,6 +45,11 @@ src/
 * Este proyecto usa solo las primeras 10 tareas de la API.
 * El diseño es simple y puede ser fácilmente mejorado con otros frameworks y estilos como Tailwind o Bootstrap si se requiere.
 ---
+## Prototipo en línea
+
+Puedes ver el prototipo funcionando en:  
+👉 [https://jdiegomoreno8.github.io/PruebaTenicaClaseAlta/](https://jdiegomoreno8.github.io/PruebaTenicaClaseAlta/)
+
 ## Autor
 * Juan Diego Ospina Moreno
 ---
