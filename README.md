@@ -23,7 +23,6 @@
 1. **Clona este repositorio** o descomprime los archivos en una carpeta local:
 
       git clone [https://github.com/jdiegomoreno8/PruebaTenicaClaseAlta.git]
-        cd vue-tareas
 ---
 2. Instala las dependencias del proyecto:   
    npm install
