@@ -1,18 +1,10 @@
 <template>
   <div class="app-container">
-<<<<<<< HEAD
-    <!-- Encabezado con logo y nombre de empresa -->
-    <header class="app-header">
-      <img src="/Logo.png" alt="Logo" class="logo" />
-      <div class="company-text">
-        <h1 class="company-name">Clase Alta</h1>
-=======
     <!-- Encabezado con logo y nombre de la empresa -->
     <header class="app-header">
       <img src="/Logo.png" alt="Logo" class="logo" />
       <div class="company-text">
         <h1 class="company-name">Clase Alpha</h1>
->>>>>>> Ajuste estilos, se agrega footer para despliegue
         <h6 class="company-mision">Apoyo logístico</h6>
       </div>
     </header>
@@ -20,11 +12,7 @@
     <div class="content">
       <h2 class="page-title">Lista de Tareas</h2>
 
-<<<<<<< HEAD
-      <!-- Filtro -->
-=======
       <!-- Dropdown de filtro de tareas -->
->>>>>>> Ajuste estilos, se agrega footer para despliegue
       <div class="filter-bar">
         <label for="filter">Filtrar por estado: </label>
         <select v-model="filter" id="filter">
@@ -34,75 +22,47 @@
         </select>
       </div>
 
-<<<<<<< HEAD
-      <!-- Tabla -->
-      <TaskTable :tasks="filteredTasks" />
-
-      <!-- Mensaje de error -->
-=======
       <!-- Tabla de tareas -->
       <TaskTable :tasks="filteredTasks" />
 
       <!-- Mensaje de error en caso de fallo en la API -->
->>>>>>> Ajuste estilos, se agrega footer para despliegue
       <p v-if="error" class="error-message">
         {{ error }}
       </p>
     </div>
-<<<<<<< HEAD
-=======
 
     <!-- Pie de página -->
     <footer class="footer">
       <p>&copy; {{ new Date().getFullYear() }} Clase Alpha. Todos los derechos reservados.</p>
     </footer>
->>>>>>> Ajuste estilos, se agrega footer para despliegue
   </div>
 </template>
 
 <script setup>
-<<<<<<< HEAD
-import { ref, computed, onMounted } from 'vue'
-import TaskTable from './components/TaskTable.vue'
-
-=======
 import { ref, computed, onMounted } from 'vue' 
 import TaskTable from './components/TaskTable.vue'
 
 // Estado reactivo para tareas, filtro y error
->>>>>>> Ajuste estilos, se agrega footer para despliegue
 const tasks = ref([])
 const error = ref('')
 const filter = ref('all')
 
-<<<<<<< HEAD
-=======
 // Función para obtener las tareas desde API
->>>>>>> Ajuste estilos, se agrega footer para despliegue
 const fetchTasks = async () => {
   try {
     const response = await fetch('https://jsonplaceholder.typicode.com/todos')
     if (!response.ok) throw new Error('No se pudo cargar las tareas')
     const data = await response.json()
-<<<<<<< HEAD
-    tasks.value = data.slice(0, 10)
-=======
     tasks.value = data.slice(0, 10) // Solo los primeros 10 ítems
->>>>>>> Ajuste estilos, se agrega footer para despliegue
   } catch (err) {
     error.value = err.message
   }
 }
 
-<<<<<<< HEAD
-onMounted(fetchTasks)
-
-=======
 // Ejecutar al montar el componente
 onMounted(fetchTasks)
 
 // Filtro de las tareas
->>>>>>> Ajuste estilos, se agrega footer para despliegue
 const filteredTasks = computed(() => {
   if (filter.value === 'completed') {
     return tasks.value.filter(task => task.completed)
@@ -113,82 +73,5 @@ const filteredTasks = computed(() => {
 })
 </script>
 
-<<<<<<< HEAD
-<style scoped>
-.app-container {
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-background: #F2994A;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-
-.app-header {
-  display: flex;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #ffffff;
-  color: white;
-  border-bottom: #000;
-}
-
-.logo {
-  width: 50px;
-  height: auto;
-  margin-right: 1rem;
-}
-
-.company-name {
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-.company-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1.2;
-  color: black;
-}
-
-.company-mision {
-  font-size: 0.85rem;
-  margin: 0;
-  font-weight: normal;
-  opacity: 0.9;
-}
-
-.content {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-}
-
-.page-title {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #000;
-}
-
-.filter-bar {
-  margin-bottom: 1rem;
-  text-align: center;
-  color: #000;
-}
-
-#filter {
-  padding: 0.3rem;
-  font-size: 1rem;
-}
-
-.error-message {
-  color: red;
-  text-align: center;
-  margin-top: 1rem;
-}
-</style>
-=======
 <!-- Importación de estilos externos -->
 <style scoped src="./assets/styles/app.css"></style>
->>>>>>> Ajuste estilos, se agrega footer para despliegue
