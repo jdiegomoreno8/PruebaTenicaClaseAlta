@@ -3,6 +3,6 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: 'https://github.com/jdiegomoreno8/PruebaTenicaClaseAlta.git',  // reemplaza con el nombre exacto de tu repo en GitHub
+  base: '/PruebaTenicaClaseAlta',  // Repo en GitHub
   plugins: [vue()],
 })
